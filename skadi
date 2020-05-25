@@ -1,0 +1,3 @@
+cat */api.txt | sed 's/htt/curl -LI htt/' | sed "s/$/ -o \/dev\/null -w '%{http_code} => %{url_effective}\n' -s/" > mek
+bash mek
+rm mek

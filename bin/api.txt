@@ -1,0 +1,10 @@
+https://danbooru.donmai.us
+https://gelbooru.com/index.php?page
+https://konachan.com/post.json
+https://konachan.net/post.json
+https://lolibooru.moe/
+https://rule34.xxx/index.php?page
+https://safebooru.org/index.php
+https://tbib.org/index.php?page
+https://xbooru.com/index.php
+https://yande.re/post.json

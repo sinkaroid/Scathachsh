@@ -1,0 +1,62 @@
+#!/bin/bash
+#sin
+
+RED=$(tput setaf 1) 
+GREEN=$(tput setaf 2) 
+CYAN=$(tput setaf 6) 
+WHITE=$(tput setaf 7) 
+begin=$(date +"%s")
+
+echo -e "${RED}
+
+ _____           _   _                _         _     
+/  ___|         | | | |              | |       | |    
+\ '--.  ___ __ _| |_| |__   __ _  ___| |__  ___| |__  
+ '--. \/ __/ _' | __| '_ \ / _' |/ __| '_ \/ __| '_ \ 
+/\__/ / (_| (_| | |_| | | | (_| | (__| | | \__ \ | | |
+\____/ \___\__,_|\__|_| |_|\__,_|\___|_| |_|___/_| |_|
+             Boorus family scraper - 
+             trying to satisfed your mass request from each separated vendors"
+echo -e "${GREEN}"
+
+PS3='type your vendor number or "11" to exit: '
+options=("danbooru" "gelbooru" "konachan" "konachannet" "lolibooru" "rule34" "safebooru" "tbib" "xbooru" "yandere" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "danbooru")
+            cd bin;./danbor.sh
+            ;;
+        "gelbooru")
+            cd bin;./gelbo.sh
+            ;;
+        "konachan")
+            cd bin;./kona.sh
+            ;;   
+        "konachannet")
+            cd bin;./konanet.sh
+            ;;
+        "lolibooru")
+            cd bin;./loli.sh
+            ;;
+        "rule34")
+            cd bin;./rule.sh
+            ;;
+        "safebooru")
+            cd bin;./safe.sh
+            ;;
+        "tbib")
+            cd bin;./tbib.sh
+            ;;
+        "xbooru")
+            cd bin;./xbor.sh
+            ;;
+        "yandere")
+            cd bin;./yander.sh
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
