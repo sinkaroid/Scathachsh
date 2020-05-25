@@ -8,16 +8,16 @@
 
 **Scathachsh**  
 Work as core to Inject parameter and send mass request through APIbooru(10boorus)  
-Just put that tags/artist u will get it.  
+Just put that tags/artist u will get it, and download however you want.  
 many dependencies isn't needed, but if u run on windows consider to put bash binary on your system.  
+- [Demo](/res/sca.gif)  
 
 ## Global pattern
+booru family mostly using this attr:
 ```sh
 json="cat ${kode}.html"
 ${json} | grep -o 'file_url="[^"]*' | sed 's/file_url="//g' > out;
 ```
-- [Demo](/res/sca.gif)  
-`wget --page-requisites --span-hosts -O` using dis if some cloudflare issues.
 ## Response
 [./skadi](skadi) == works as a request-response protocol between a client and vendor server.
 this case just check your request was blocked by your provider or not. some provider doing sucksthings like dis.

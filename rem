@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "beta"
+git commit -m "hook"
 git push -f origin master
